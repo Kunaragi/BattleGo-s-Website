@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
+
   <title>BattleGo's Main Page</title>
   <meta charset="utf-8">
   <link rel="stylesheet" media="screen" href="style.css">
+
+      <script type="text/javascript">
+      function secret(secretId)
+      {
+    if(document.getElementById)
+      {
+        secret = document.getElementById(secretId);
+        if(secret.style.display =="none")
+          {
+            secret.style.display ="";
+          }
+          else{
+             secret.style.display ="none";
+          }
+      }
+    }
+        </script>
+
+
 </head>
 
-  <body background="picture/Pokémon.full.348825.jpg">
+  <body>
 <h1>BattleGo Official WebSite</h1>
 
 <hr/>
@@ -23,26 +45,45 @@
 
 <h2>Avant de commencer...</h2>
 
-  <p>
-    Petit rappel pour moi-même.
-    <br/>
-    Pour mon PC Asus avec un clavier "QWERTY":
-    <br/>
-     -la combinaison de touche pour faire un crochet ouvert "<" (signe inférieur) est :
-    ALT+060
-    <br/>
-      -la combinaison de touche pour faire un crochet fermé ">" (signe supérieur) est :
-      ALT+062
+
+
+
+
+  <dt style="cursor: pointer;">
+<a href="" onclick="global:secret('cache');return false;">
+  Petit rappel pour moi-même.
+</a>
+
+<br /><br />
+
+</dt>
+
+  <!--le bloc caché -->
+  <div id="cache" style="display : none; ">
+
+    <p>
       <br/>
+      Pour mon PC Asus avec un clavier "QWERTY":
       <br/>
-      J'ai beaucoup à apprendre, notamment quelques balises et attributs à comprendre.
+       -la combinaison de touche pour faire un crochet ouvert "<" (signe inférieur) est :
+      ALT+060
+      <br/>
+        -la combinaison de touche pour faire un crochet fermé ">" (signe supérieur) est :
+        ALT+062
+        <br/>
+        <br/>
+        J'ai beaucoup à apprendre, notamment quelques balises et attributs à comprendre.
   </p>
+  </div>
+
 
 <div id="introduction">
     <h2>Introduction</h2>
       <p>
         BattleGo est un projet collaboratif sous contrat et soutenu par Nintendo, et développé par une entreprise indépendant appellé
-        "Ts'United Entertainment". Suite à l'annonce de la nouvelle console de Nintendo appellé "Nintendo Switch", il est prévu de
+        "Ts'United Entertainment". Suite à l'annonce de la nouvelle console de Nintendo appellé "Nintendo Switch", il est prévu de ...
+        <break />
+        [voir le texte depuis le PC Asus]
       </p>
 </div>
 
@@ -51,6 +92,8 @@
 
 
 <footer>
+
+
 
 </footer>
 
