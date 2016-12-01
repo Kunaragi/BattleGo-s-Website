@@ -1,6 +1,8 @@
 body
 {
-  background-image: url(picture/Pokémon.full.348825.jpg)
+  background-image: url(picture/Pokémon.full.348825.jpg);
+  background-attachment: fixed;
+  cursor: url(picture/cursor/cursor.png), pointer;
 }
 
 h1
