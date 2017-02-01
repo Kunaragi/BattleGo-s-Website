@@ -87,6 +87,14 @@ INSERT INTO `users` (`id`, `email`, `password`, `token`, `pseudonyme`) VALUES
 --
 
 --
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `token` (`token`);
+
+--
 -- Index pour la table `attacks`
 --
 ALTER TABLE `attacks`
@@ -103,21 +111,28 @@ ALTER TABLE `pokedex`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`),
   ADD KEY `speed` (`speed`),
-  ADD KEY `live` (`hp`),
+  ADD KEY `hp` (`hp`),
   ADD KEY `power` (`attaque_physique`),
   ADD KEY `attaque_speciale` (`attaque_speciale`,`defense`,`defense_speciale`);
 
 --
--- Index pour la table `users`
+-- Index pour la table `box`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `token` (`token`);
+
+ALTER TABLE `box`
+  ADD PRIMARY KEY (`id`)
+  ADD KEY `name` (`name`)
+ 
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `attacks`
@@ -129,11 +144,7 @@ ALTER TABLE `attacks`
 --
 ALTER TABLE `pokedex`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- Contraintes pour les tables exportées
 --
